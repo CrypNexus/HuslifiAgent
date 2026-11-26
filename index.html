@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10111a">
+  <title>HuslifiAgent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">H</div>
+        <span>HuslifiAgent</span>
+      </div>
+
+      <button class="new-chat" id="newChatBtn">＋ New chat</button>
+
+      <nav class="navigation">
+        <button class="nav-item active" data-page="home">⌂ <span>Home</span></button>
+        <button class="nav-item" data-page="history">◷ <span>Chat history</span></button>
+      </nav>
+
+      <div class="sidebar-heading">RECENT CHATS</div>
+      <div id="recentChats" class="recent-chats"></div>
+
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-page="settings">⚙ <span>Settings</span></button>
+        <button class="nav-item" data-page="profile">◉ <span>Profile</span></button>
+        <div class="version">HuslifiAgent 1.0 UP0</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div id="breadcrumb">Home</div>
+        <div class="top-actions">
+          <button id="themeBtn" class="icon-button" title="Change theme">☼</button>
+          <button class="avatar" id="profileBtn">U</button>
+        </div>
+      </header>
+
+      <section id="page" class="page"></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
