@@ -256,3 +256,226 @@ button {
     padding: 0 16px;
   }
 }
+
+/* HuslifiAgent Pages */
+
+.welcome {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #a092ff, #6755e9);
+  color: white;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.welcome h1, .section-heading h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -1.3px;
+}
+
+.welcome h1 span {
+  color: var(--accent);
+}
+
+.welcome p, .section-heading p {
+  color: var(--muted);
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  border-radius: 11px;
+  padding: 13px 20px;
+  font-weight: 700;
+  margin-top: 25px;
+  transition: .2s;
+}
+
+.primary-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 15px 0 30px;
+}
+
+.message {
+  max-width: 78%;
+  padding: 13px 17px;
+  border-radius: 16px;
+  line-height: 1.6;
+  font-size: 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: var(--surface);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 10px;
+}
+
+.chat-form textarea {
+  flex: 1;
+  resize: vertical;
+  min-height: 44px;
+  max-height: 140px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  padding: 12px;
+}
+
+.chat-form button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font-size: 19px;
+}
+
+.chat-disclaimer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 14px;
+}
+
+.history-list {
+  display: grid;
+  gap: 9px;
+}
+
+.history-item, .settings-card {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 13px;
+  padding: 17px;
+  text-align: left;
+}
+
+.history-item:hover {
+  background: var(--surface-hover);
+}
+
+.settings-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 15px;
+}
+
+.settings-card h3 {
+  font-size: 15px;
+}
+
+.settings-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.settings-card select, .profile-card input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 10px;
+  outline: none;
+}
+
+.profile-card {
+  max-width: 450px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.profile-card label {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.profile-card input {
+  width: 100%;
+}
+
+.profile-card #profileStatus {
+  color: var(--accent);
+  font-size: 13px;
+  margin-top: 12px;
+}
