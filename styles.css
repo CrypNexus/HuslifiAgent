@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg: #10111a;
+  --sidebar: #151620;
+  --surface: #1c1e2a;
+  --surface-hover: #252736;
+  --text: #f2f2f8;
+  --muted: #9699ad;
+  --border: #292b3a;
+  --accent: #8b7cff;
+  --accent-hover: #a092ff;
+}
+
+body.light {
+  --bg: #f6f6fa;
+  --sidebar: #ffffff;
+  --surface: #f0f0f7;
+  --surface-hover: #e7e7f1;
+  --text: #202132;
+  --muted: #77798d;
+  --border: #e5e5ed;
+  --accent: #6958ed;
+  --accent-hover: #5847db;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background .25s, color .25s;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  padding: 23px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 7px;
+  margin-bottom: 32px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.6px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #a092ff, #6755e9);
+  color: white;
+  font-size: 20px;
+}
+
+.new-chat {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 11px;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.new-chat:hover, .nav-item:hover {
+  background: var(--surface-hover);
+}
+
+.navigation {
+  margin-top: 24px;
+  display: grid;
+  gap: 6px;
+}
+
+.nav-item {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 11px 12px;
+  border-radius: 9px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.nav-item.active {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.sidebar-heading {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin: 32px 9px 12px;
+}
+
+.recent-chats {
+  display: grid;
+  gap: 4px;
+}
+
+.recent-chat {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.recent-chat:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 5px;
+}
+
+.version {
+  color: var(--muted);
+  font-size: 11px;
+  padding: 14px 10px 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 68px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button, .avatar {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  border: 0;
+  font-weight: 700;
+}
+
+.page {
+  width: 100%;
+  max-width: 1050px;
+  padding: 48px 32px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 72px;
+    min-width: 72px;
+    padding: 18px 9px;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .brand > span,
+  .new-chat,
+  .nav-item span,
+  .sidebar-heading,
+  .recent-chats,
+  .version {
+    display: none;
+  }
+
+  .navigation {
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 13px 5px;
+  }
+
+  .page {
+    padding: 30px 18px;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+}
